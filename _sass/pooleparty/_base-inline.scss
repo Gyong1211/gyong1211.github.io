@@ -52,6 +52,13 @@ img, .img {
   }
 }
 
+img.center-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: none;
+}
+
 // @media print {
 //   a::after {
 //     content: " (" attr(href) ") ";

@@ -5,12 +5,23 @@
   {% for document in site.documents %}
     {% assign pages = pages | push: document %}
   {% endfor %}
-
+  {% assign subpages = pages | where: "menu", false | sort: "order" %}
   {% assign pages = pages | where: "menu", true | sort: "order" %}
 
   {% for node in pages %}
     <li>
       <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+      {% if node.tag %}<label class="folder-button" for="list-item-{{ forloop.index }}">▾</label>{% endif %}
     </li>
+    {% if node.tag %}<input type="checkbox" class="hidden" id="list-item-{{ forloop.index }}">{% endif %}
+    <ul class="list-body">
+        {% for subnode in subpages %}
+           {% if subnode.category == node.slug %}
+             <li>
+               <a class="sidebar-nav-subitem{% if page.url == subnode.url %} active{% endif %}" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+             </li>
+           {% endif %}
+        {% endfor %}
+    </ul>
   {% endfor %}
 </ul>

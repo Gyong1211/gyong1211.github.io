@@ -1,17 +1,18 @@
 .sidebar-social {
   margin-bottom: .5rem;
 
-  &::after {
-    @extend .clearfix
-  }
+  // &::after {
+  //   @extend .clearfix
+  // }
 
   > ul {
     list-style: none;
     padding-left: 0;
     margin: 0 -.25rem;
+    text-align: center;
 
     > li {
-      float: left;
+      display: inline-block;
       margin: 0 .25rem;
 
       > a {
