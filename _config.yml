@@ -26,8 +26,8 @@ author:
   email:             gyong1211@gmail.com
 
 # Fallback image and color
-image:               /assets/img/nap.jpg
-color:               '#d28445'
+image:               /assets/img/water.jpg
+color:               '#6a9fb5'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:        "'Roboto Slab', Helvetica, Arial, sans-serif"

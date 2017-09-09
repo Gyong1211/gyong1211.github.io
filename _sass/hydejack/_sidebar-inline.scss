@@ -121,18 +121,34 @@ a.sidebar-nav-subitem {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-input[type="checkbox"]:checked ~ ul {
-  list-style: none;
-  height: 100%;
-  transform-origin: top;
-  transform: scaleY(1);
+input[type="checkbox"]:checked {
+  ~ ul {
+    list-style: none;
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  ~ label > .open {
+    display: none;
+  }
+  ~ label > .close {
+    display: inline-block;
+  }
 }
 
-input[type="checkbox"] ~ ul {
-  list-style: none;
-  height: 0;
-  transform-origin: top;
-  transform: scaleY(0);
+input[type="checkbox"] {
+  ~ ul {
+    list-style: none;
+    height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  ~ label > .open {
+    display: inline-block;
+  }
+  ~ label > .close {
+    display: none;
+  }
 }
 
 
@@ -149,6 +165,7 @@ input[type="checkbox"] ~ ul {
   right: 5px;
   top: 4.25px;
   line-height: 30px;
+  font-size: 0;
   background-color: rgba(50,50,50,0.1);
   border-radius: 4px;
   -moz-user-select: none;
@@ -159,6 +176,15 @@ input[type="checkbox"] ~ ul {
 
   &:hover {
     background-color: rgba(50,50,50,0.5);
+  }
+  > span {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 10px;
   }
 }
 
