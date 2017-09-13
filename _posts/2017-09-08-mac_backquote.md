@@ -33,7 +33,7 @@ MarkDown 문서를 작성하는 경우 Back quote(<code class="highlighter-rouge
 혹은 터미널에서 아래의 명령어를 입력하면 알아서 `DefaultKeybinding.dict`를 생성해준다.
 
 ```
-curl -sSL https://gist.githubusercontent.com/redism/43bc51cab62269fa97a220a7bb5e1103/raw/0d55b37b60e0e0bd3d0d7f53995de0a722f9820c/kr_won_to_backquote.sh | s
+curl -sSL https://gist.githubusercontent.com/redism/43bc51cab62269fa97a220a7bb5e1103/raw/0d55b37b60e0e0bd3d0d7f53995de0a722f9820c/kr_won_to_backquote.sh | sh
 ```
 
 
