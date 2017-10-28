@@ -1,7 +1,7 @@
 ---
 layout: list
-title: AWS
-slug: aws
+title: ETC
+slug: etc
 category: devlog
 menu: false
 order: 3
