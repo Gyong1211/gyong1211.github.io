@@ -189,7 +189,7 @@ sudo crontab -e
 위 명령어를 입력하여 crontab에 아래의 작업을 추가해주자
 
 ```
-30 5 1 * * /bin/bash -l -c '/opt/letsencrypt/letsencrypt-auto renew --quiet --no-self-upgrade && service nginx reload'
+30 5 1 * * /bin/bash -l -c '/opt/letsencrypt/letsencrypt-auto renew --quiet --no-self-upgrade && sudo service nginx reload'
 ```
 
 매달 1일 5시 30분에 SSL 인증서 갱신 시도를 하고, nginx를 reload 하도록 추가하였다.  
